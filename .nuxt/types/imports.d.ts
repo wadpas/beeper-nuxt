@@ -18,13 +18,11 @@ declare global {
   const defineNuxtLink: typeof import('../../node_modules/nuxt/dist/app/components/nuxt-link')['defineNuxtLink']
   const defineNuxtPlugin: typeof import('../../node_modules/nuxt/dist/app/nuxt')['defineNuxtPlugin']
   const defineNuxtRouteMiddleware: typeof import('../../node_modules/nuxt/dist/app/composables/router')['defineNuxtRouteMiddleware']
-  const definePageMeta: typeof import('../../node_modules/nuxt/dist/pages/runtime/composables')['definePageMeta']
   const definePayloadPlugin: typeof import('../../node_modules/nuxt/dist/app/nuxt')['definePayloadPlugin']
   const definePayloadReducer: typeof import('../../node_modules/nuxt/dist/app/composables/payload')['definePayloadReducer']
   const definePayloadReviver: typeof import('../../node_modules/nuxt/dist/app/composables/payload')['definePayloadReviver']
   const effect: typeof import('vue')['effect']
   const effectScope: typeof import('vue')['effectScope']
-  const fetchContentNavigation: typeof import('../../node_modules/@nuxt/content/dist/runtime/legacy/composables/navigation')['fetchContentNavigation']
   const getAppManifest: typeof import('../../node_modules/nuxt/dist/app/composables/manifest')['getAppManifest']
   const getCurrentInstance: typeof import('vue')['getCurrentInstance']
   const getCurrentScope: typeof import('vue')['getCurrentScope']
@@ -49,8 +47,8 @@ declare global {
   const nextTick: typeof import('vue')['nextTick']
   const onActivated: typeof import('vue')['onActivated']
   const onBeforeMount: typeof import('vue')['onBeforeMount']
-  const onBeforeRouteLeave: typeof import('vue-router')['onBeforeRouteLeave']
-  const onBeforeRouteUpdate: typeof import('vue-router')['onBeforeRouteUpdate']
+  const onBeforeRouteLeave: typeof import('../../node_modules/nuxt/dist/app/composables/router')['onBeforeRouteLeave']
+  const onBeforeRouteUpdate: typeof import('../../node_modules/nuxt/dist/app/composables/router')['onBeforeRouteUpdate']
   const onBeforeUnmount: typeof import('vue')['onBeforeUnmount']
   const onBeforeUpdate: typeof import('vue')['onBeforeUpdate']
   const onDeactivated: typeof import('vue')['onDeactivated']
@@ -64,7 +62,6 @@ declare global {
   const onServerPrefetch: typeof import('vue')['onServerPrefetch']
   const onUnmounted: typeof import('vue')['onUnmounted']
   const onUpdated: typeof import('vue')['onUpdated']
-  const parseMarkdown: typeof import('../../node_modules/@nuxtjs/mdc/dist/runtime/parser')['parseMarkdown']
   const prefetchComponents: typeof import('../../node_modules/nuxt/dist/app/composables/preload')['prefetchComponents']
   const preloadComponents: typeof import('../../node_modules/nuxt/dist/app/composables/preload')['preloadComponents']
   const preloadPayload: typeof import('../../node_modules/nuxt/dist/app/composables/payload')['preloadPayload']
@@ -72,7 +69,6 @@ declare global {
   const prerenderRoutes: typeof import('../../node_modules/nuxt/dist/app/composables/ssr')['prerenderRoutes']
   const provide: typeof import('vue')['provide']
   const proxyRefs: typeof import('vue')['proxyRefs']
-  const queryContent: typeof import('../../node_modules/@nuxt/content/dist/runtime/legacy/composables/query')['queryContent']
   const reactive: typeof import('vue')['reactive']
   const readonly: typeof import('vue')['readonly']
   const ref: typeof import('vue')['ref']
@@ -95,17 +91,10 @@ declare global {
   const triggerRef: typeof import('vue')['triggerRef']
   const tryUseNuxtApp: typeof import('../../node_modules/nuxt/dist/app/nuxt')['tryUseNuxtApp']
   const unref: typeof import('vue')['unref']
-  const unwrapSlot: typeof import('../../node_modules/@nuxtjs/mdc/dist/runtime/utils/node')['flatUnwrap']
   const updateAppConfig: typeof import('../../node_modules/nuxt/dist/app/config')['updateAppConfig']
   const useAppConfig: typeof import('../../node_modules/nuxt/dist/app/config')['useAppConfig']
   const useAsyncData: typeof import('../../node_modules/nuxt/dist/app/composables/asyncData')['useAsyncData']
   const useAttrs: typeof import('vue')['useAttrs']
-  const useColor: typeof import('../../composables/state')['useColor']
-  const useContent: typeof import('../../node_modules/@nuxt/content/dist/runtime/composables/utils')['useContentDisabled']
-  const useContentHead: typeof import('../../node_modules/@nuxt/content/dist/runtime/composables/head')['useContentHead']
-  const useContentHelpers: typeof import('../../node_modules/@nuxt/content/dist/runtime/composables/helpers')['useContentHelpers']
-  const useContentPreview: typeof import('../../node_modules/@nuxt/content/dist/runtime/composables/preview')['useContentPreview']
-  const useContentState: typeof import('../../node_modules/@nuxt/content/dist/runtime/composables/utils')['useContentDisabled']
   const useCookie: typeof import('../../node_modules/nuxt/dist/app/composables/cookie')['useCookie']
   const useCssModule: typeof import('vue')['useCssModule']
   const useCssVars: typeof import('vue')['useCssVars']
@@ -117,11 +106,11 @@ declare global {
   const useId: typeof import('vue')['useId']
   const useLazyAsyncData: typeof import('../../node_modules/nuxt/dist/app/composables/asyncData')['useLazyAsyncData']
   const useLazyFetch: typeof import('../../node_modules/nuxt/dist/app/composables/fetch')['useLazyFetch']
-  const useLink: typeof import('vue-router')['useLink']
   const useLoadingIndicator: typeof import('../../node_modules/nuxt/dist/app/composables/loading-indicator')['useLoadingIndicator']
   const useModel: typeof import('vue')['useModel']
   const useNuxtApp: typeof import('../../node_modules/nuxt/dist/app/nuxt')['useNuxtApp']
   const useNuxtData: typeof import('../../node_modules/nuxt/dist/app/composables/asyncData')['useNuxtData']
+  const useNuxtDevTools: typeof import('../../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools')['useNuxtDevTools']
   const usePreviewMode: typeof import('../../node_modules/nuxt/dist/app/composables/preview')['usePreviewMode']
   const useRequestEvent: typeof import('../../node_modules/nuxt/dist/app/composables/ssr')['useRequestEvent']
   const useRequestFetch: typeof import('../../node_modules/nuxt/dist/app/composables/ssr')['useRequestFetch']
@@ -167,13 +156,10 @@ declare global {
   const useState: typeof import('../../node_modules/nuxt/dist/app/composables/state')['useState']
   const useTemplateRef: typeof import('vue')['useTemplateRef']
   const useTransitionState: typeof import('vue')['useTransitionState']
-  const useUnwrap: typeof import('../../node_modules/@nuxt/content/dist/runtime/composables/useUnwrap')['useUnwrap']
-  const useUtils: typeof import('../../composables/useUtils')['useUtils']
   const watch: typeof import('vue')['watch']
   const watchEffect: typeof import('vue')['watchEffect']
   const watchPostEffect: typeof import('vue')['watchPostEffect']
   const watchSyncEffect: typeof import('vue')['watchSyncEffect']
-  const withContentBase: typeof import('../../node_modules/@nuxt/content/dist/runtime/composables/utils')['withContentBase']
   const withCtx: typeof import('vue')['withCtx']
   const withDirectives: typeof import('vue')['withDirectives']
   const withKeys: typeof import('vue')['withKeys']
@@ -208,13 +194,11 @@ declare module 'vue' {
     readonly defineNuxtLink: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/components/nuxt-link')['defineNuxtLink']>
     readonly defineNuxtPlugin: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/nuxt')['defineNuxtPlugin']>
     readonly defineNuxtRouteMiddleware: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/router')['defineNuxtRouteMiddleware']>
-    readonly definePageMeta: UnwrapRef<typeof import('../../node_modules/nuxt/dist/pages/runtime/composables')['definePageMeta']>
     readonly definePayloadPlugin: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/nuxt')['definePayloadPlugin']>
     readonly definePayloadReducer: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/payload')['definePayloadReducer']>
     readonly definePayloadReviver: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/payload')['definePayloadReviver']>
     readonly effect: UnwrapRef<typeof import('vue')['effect']>
     readonly effectScope: UnwrapRef<typeof import('vue')['effectScope']>
-    readonly fetchContentNavigation: UnwrapRef<typeof import('../../node_modules/@nuxt/content/dist/runtime/legacy/composables/navigation')['fetchContentNavigation']>
     readonly getAppManifest: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/manifest')['getAppManifest']>
     readonly getCurrentInstance: UnwrapRef<typeof import('vue')['getCurrentInstance']>
     readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>
@@ -239,8 +223,8 @@ declare module 'vue' {
     readonly nextTick: UnwrapRef<typeof import('vue')['nextTick']>
     readonly onActivated: UnwrapRef<typeof import('vue')['onActivated']>
     readonly onBeforeMount: UnwrapRef<typeof import('vue')['onBeforeMount']>
-    readonly onBeforeRouteLeave: UnwrapRef<typeof import('vue-router')['onBeforeRouteLeave']>
-    readonly onBeforeRouteUpdate: UnwrapRef<typeof import('vue-router')['onBeforeRouteUpdate']>
+    readonly onBeforeRouteLeave: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/router')['onBeforeRouteLeave']>
+    readonly onBeforeRouteUpdate: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/router')['onBeforeRouteUpdate']>
     readonly onBeforeUnmount: UnwrapRef<typeof import('vue')['onBeforeUnmount']>
     readonly onBeforeUpdate: UnwrapRef<typeof import('vue')['onBeforeUpdate']>
     readonly onDeactivated: UnwrapRef<typeof import('vue')['onDeactivated']>
@@ -254,7 +238,6 @@ declare module 'vue' {
     readonly onServerPrefetch: UnwrapRef<typeof import('vue')['onServerPrefetch']>
     readonly onUnmounted: UnwrapRef<typeof import('vue')['onUnmounted']>
     readonly onUpdated: UnwrapRef<typeof import('vue')['onUpdated']>
-    readonly parseMarkdown: UnwrapRef<typeof import('../../node_modules/@nuxtjs/mdc/dist/runtime/parser')['parseMarkdown']>
     readonly prefetchComponents: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/preload')['prefetchComponents']>
     readonly preloadComponents: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/preload')['preloadComponents']>
     readonly preloadPayload: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/payload')['preloadPayload']>
@@ -262,7 +245,6 @@ declare module 'vue' {
     readonly prerenderRoutes: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/ssr')['prerenderRoutes']>
     readonly provide: UnwrapRef<typeof import('vue')['provide']>
     readonly proxyRefs: UnwrapRef<typeof import('vue')['proxyRefs']>
-    readonly queryContent: UnwrapRef<typeof import('../../node_modules/@nuxt/content/dist/runtime/legacy/composables/query')['queryContent']>
     readonly reactive: UnwrapRef<typeof import('vue')['reactive']>
     readonly readonly: UnwrapRef<typeof import('vue')['readonly']>
     readonly ref: UnwrapRef<typeof import('vue')['ref']>
@@ -285,17 +267,10 @@ declare module 'vue' {
     readonly triggerRef: UnwrapRef<typeof import('vue')['triggerRef']>
     readonly tryUseNuxtApp: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/nuxt')['tryUseNuxtApp']>
     readonly unref: UnwrapRef<typeof import('vue')['unref']>
-    readonly unwrapSlot: UnwrapRef<typeof import('../../node_modules/@nuxtjs/mdc/dist/runtime/utils/node')['flatUnwrap']>
     readonly updateAppConfig: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/config')['updateAppConfig']>
     readonly useAppConfig: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/config')['useAppConfig']>
     readonly useAsyncData: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/asyncData')['useAsyncData']>
     readonly useAttrs: UnwrapRef<typeof import('vue')['useAttrs']>
-    readonly useColor: UnwrapRef<typeof import('../../composables/state')['useColor']>
-    readonly useContent: UnwrapRef<typeof import('../../node_modules/@nuxt/content/dist/runtime/composables/utils')['useContentDisabled']>
-    readonly useContentHead: UnwrapRef<typeof import('../../node_modules/@nuxt/content/dist/runtime/composables/head')['useContentHead']>
-    readonly useContentHelpers: UnwrapRef<typeof import('../../node_modules/@nuxt/content/dist/runtime/composables/helpers')['useContentHelpers']>
-    readonly useContentPreview: UnwrapRef<typeof import('../../node_modules/@nuxt/content/dist/runtime/composables/preview')['useContentPreview']>
-    readonly useContentState: UnwrapRef<typeof import('../../node_modules/@nuxt/content/dist/runtime/composables/utils')['useContentDisabled']>
     readonly useCookie: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/cookie')['useCookie']>
     readonly useCssModule: UnwrapRef<typeof import('vue')['useCssModule']>
     readonly useCssVars: UnwrapRef<typeof import('vue')['useCssVars']>
@@ -307,11 +282,11 @@ declare module 'vue' {
     readonly useId: UnwrapRef<typeof import('vue')['useId']>
     readonly useLazyAsyncData: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/asyncData')['useLazyAsyncData']>
     readonly useLazyFetch: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/fetch')['useLazyFetch']>
-    readonly useLink: UnwrapRef<typeof import('vue-router')['useLink']>
     readonly useLoadingIndicator: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/loading-indicator')['useLoadingIndicator']>
     readonly useModel: UnwrapRef<typeof import('vue')['useModel']>
     readonly useNuxtApp: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/nuxt')['useNuxtApp']>
     readonly useNuxtData: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/asyncData')['useNuxtData']>
+    readonly useNuxtDevTools: UnwrapRef<typeof import('../../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools')['useNuxtDevTools']>
     readonly usePreviewMode: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/preview')['usePreviewMode']>
     readonly useRequestEvent: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/ssr')['useRequestEvent']>
     readonly useRequestFetch: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/ssr')['useRequestFetch']>
@@ -357,13 +332,10 @@ declare module 'vue' {
     readonly useState: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/state')['useState']>
     readonly useTemplateRef: UnwrapRef<typeof import('vue')['useTemplateRef']>
     readonly useTransitionState: UnwrapRef<typeof import('vue')['useTransitionState']>
-    readonly useUnwrap: UnwrapRef<typeof import('../../node_modules/@nuxt/content/dist/runtime/composables/useUnwrap')['useUnwrap']>
-    readonly useUtils: UnwrapRef<typeof import('../../composables/useUtils')['useUtils']>
     readonly watch: UnwrapRef<typeof import('vue')['watch']>
     readonly watchEffect: UnwrapRef<typeof import('vue')['watchEffect']>
     readonly watchPostEffect: UnwrapRef<typeof import('vue')['watchPostEffect']>
     readonly watchSyncEffect: UnwrapRef<typeof import('vue')['watchSyncEffect']>
-    readonly withContentBase: UnwrapRef<typeof import('../../node_modules/@nuxt/content/dist/runtime/composables/utils')['withContentBase']>
     readonly withCtx: UnwrapRef<typeof import('vue')['withCtx']>
     readonly withDirectives: UnwrapRef<typeof import('vue')['withDirectives']>
     readonly withKeys: UnwrapRef<typeof import('vue')['withKeys']>
