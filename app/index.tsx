@@ -4,12 +4,12 @@ import React from 'react'
 
 const index = () => {
   return (
-    <View className="items-center justify-center flex-1 bg-white0">
+    <View className="items-center justify-center flex-1 bg-slate-300">
       <Text className="font-pextrabold">index</Text>
       <Link
-        href="/profile"
-        className="text-sky-500">
-        Profile
+        href="/home"
+        className="w-2 text-sky-500">
+        home
       </Link>
     </View>
   )
