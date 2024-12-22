@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "vogel1",
-    "slug": "vogel1",
+    "name": "cull",
+    "slug": "cull",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "cull",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -31,6 +31,10 @@
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
+        },
+        "expo-font",
+        {
+          "fonts": ["./assets/fonts/Poppins-Black.otf"]
         }
       ]
     ],
