@@ -1,7 +1,8 @@
 import React from 'react'
-import { ScrollView, Text, Image, View, Button, StatusBar } from 'react-native'
+import { ScrollView, Text, Image, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { Redirect, router, Href } from 'expo-router'
+import { StatusBar } from 'expo-status-bar'
+import { router, Href } from 'expo-router'
 import { images } from '../constants'
 import CustomButton from '@/components/CustomButton'
 
@@ -24,13 +25,13 @@ const index = () => {
           </View>
           <CustomButton
             title="Get Started"
-            handlePress={() => router.push('sign-in' as Href)}
+            handlePress={() => router.push('/sign-in' as Href)}
           />
         </View>
       </ScrollView>
       <StatusBar
         backgroundColor="#161622"
-        barStyle="light-content"
+        style="light"
       />
     </SafeAreaView>
   )
