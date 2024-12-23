@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "cull",
-    "slug": "cull",
+    "name": "kultu",
+    "slug": "kultu",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "cull",
+    "scheme": "kultu",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -14,7 +14,8 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#ffffff",
+        "package": "com.wad.kultu"
       }
     },
     "web": {

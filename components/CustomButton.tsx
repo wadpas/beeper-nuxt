@@ -4,7 +4,7 @@ import React from 'react'
 
 const CustomButton = ({ title, handlePress, isLoading }: any) => {
   return (
-    <View className="w-full m-10 rounded-xl">
+    <View className="w-full m-10">
       <Button
         title={title}
         onPress={handlePress}
