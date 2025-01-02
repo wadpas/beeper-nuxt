@@ -1,15 +1,19 @@
 import React, { useState } from 'react'
-import { Link, router } from 'expo-router'
+import { Link, router, RelativePathString } from 'expo-router'
 import { View, Text, ScrollView, Image, Alert } from 'react-native'
-import { SafeAreaView } from 'react-native-safe-area-context'
-import { images } from '../../constants'
+import { singIn } from '@/lib/appwrite'
+
+import { useGlobalContext } from '../../context/GlobalProvider'
 import FormField from '@/components/FormField'
 import CustomButton from '@/components/CustomButton'
-import { singIn } from '@/lib/appwrite'
-import { useGlobalContext } from '../../context/GlobalProvider'
+
+const logo = require('../../assets/images/logo.svg')
 
 const SingIn = () => {
-  const [form, setForm] = useState({ email: '', password: '' })
+  const [form, setForm] = useState({
+    email: '',
+    password: '',
+  })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const { setUser, setIsLogged } = useGlobalContext()
 
@@ -29,41 +33,37 @@ const SingIn = () => {
   }
 
   return (
-    <SafeAreaView className="h-full bg-black ">
-      <ScrollView>
-        <View className="w-full justify-center items-center min-h-[85vh] p-4">
-          <Image source={images.logo} />
-          <Text className="mt-10 text-2xl font-semibold text-white">Login</Text>
-          <FormField
-            title="Email"
-            value={form.email}
-            placeholder="Enter your email"
-            handleChangeText={(e: any) => setForm({ ...form, email: e })}
-            keyboardType="email-address"
-          />
-          <FormField
-            title="Password"
-            value={form.password}
-            placeholder="Enter your password"
-            handleChangeText={(e: any) => setForm({ ...form, password: e })}
-          />
-          <CustomButton
-            title="Sign In"
-            className="bg-black"
-            handlePress={handleSubmit}
-            isLoading={isSubmitting}
-          />
-          <View className="flex-row items-center justify-center">
-            <Text className="font-semibold text-gray-100 text-md">Don't have an account?</Text>
-            <Link
-              href="/sign-up"
-              className="ml-2 font-semibold text-white text-md">
-              Sign Up
-            </Link>
-          </View>
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+    <View className='items-center justify-center h-full p-6 space-y-8 bg-black'>
+      <Image source={logo} />
+      <View></View>
+      <FormField
+        title='Email'
+        value={form.email}
+        placeholder='Enter your email'
+        handleChangeText={(e: any) => setForm({ ...form, email: e })}
+        keyboardType='email-address'
+      />
+      <FormField
+        title='Password'
+        value={form.password}
+        placeholder='Enter your password'
+        handleChangeText={(e: any) => setForm({ ...form, password: e })}
+      />
+      <View></View>
+      <CustomButton
+        title='Sign In'
+        handlePress={handleSubmit}
+        isLoading={isSubmitting}
+      />
+      <Text className='text-white '>
+        Don't have an account?
+        <Link
+          href={'/sign-up' as RelativePathString}
+          className='ml-2 font-bold text-primary'>
+          Sign Up
+        </Link>
+      </Text>
+    </View>
   )
 }
 

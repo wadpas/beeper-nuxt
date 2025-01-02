@@ -1,6 +1,7 @@
 import React from 'react'
 import { Stack } from 'expo-router'
 import GlobalProvider from '../context/GlobalProvider'
+import { StatusBar } from 'expo-status-bar'
 import '../global.css'
 
 const RootLayout = () => {
@@ -8,22 +9,26 @@ const RootLayout = () => {
     <GlobalProvider>
       <Stack>
         <Stack.Screen
-          name="index"
+          name='index'
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="(auth)"
+          name='(auth)'
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="(tabs)"
+          name='(tabs)'
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="search/[query]"
+          name='search/[query]'
           options={{ headerShown: false }}
         />
       </Stack>
+      <StatusBar
+        backgroundColor='#020617'
+        style='light'
+      />
     </GlobalProvider>
   )
 }

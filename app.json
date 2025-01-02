@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "kultu",
-    "slug": "kultu",
+    "name": "world",
+    "slug": "world",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "kultu",
+    "scheme": "world",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -15,7 +15,7 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff",
-        "package": "com.wad.kultu"
+        "package": "com.wad.world"
       }
     },
     "web": {
@@ -32,12 +32,6 @@
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
-        }
-      ],
-      [
-        "expo-font",
-        {
-          "fonts": ["./assets/fonts/Poppins-Black.ttf"]
         }
       ]
     ],

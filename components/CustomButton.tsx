@@ -1,17 +1,19 @@
-import { Button, View } from 'react-native'
+import { Pressable, Text } from 'react-native'
 
-import React from 'react'
+type Props = {
+  title: string
+  handlePress: () => void
+  isLoading?: boolean
+}
 
-const CustomButton = ({ title, handlePress, isLoading }: any) => {
+const CustomButton = ({ title, handlePress, isLoading }: Props) => {
   return (
-    <View className="w-full m-10">
-      <Button
-        title={title}
-        onPress={handlePress}
-        disabled={isLoading}
-        color="#f97316"
-      />
-    </View>
+    <Pressable
+      onPress={handlePress}
+      className='items-center justify-center w-full bg-primary rounded-xl min-h-12'
+      disabled={isLoading}>
+      <Text className='text-lg font-semibold text-white'>{isLoading ? 'Loading...' : title}</Text>
+    </Pressable>
   )
 }
 
